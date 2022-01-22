@@ -1,0 +1,246 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 35px;
+	transition: padding .3s ease-in-out, background-color .3s ease-in-out;
+	z-index: 100;
+	
+	&:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: calc(100vh - 100%);
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: $color_primary;
+		transition: transform .7s ease-in-out;
+		@include laptop {
+			display: none;
+		}
+	}
+	&:after {
+		content: '';
+		display: block;
+		height: 3px;
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		transform: scaleX(0);
+		background-color: $color_primary;
+		transform-origin: left;
+		transition: transform .3s ease-in-out;
+		@include laptop {
+			display: none;
+		}
+	}
+	&.hide {
+		&:before {
+			transform: translateX(100%);
+		}
+	}
+	&.show {
+		&:before {
+			transform: translateX(0);
+		}
+	}
+	&.fixed {
+		background-color: $color_tertiary;
+		padding: 10px 0;
+		&:after {
+			transform: scaleX(1);
+		}
+		@include laptop {
+			background-color: transparent;
+			padding: 35px 0 0 0 ;
+		}
+	}
+
+	@include laptop {
+		position: absolute;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 30px;
+		@include laptop {
+			width: 92.55vw;
+			margin: auto;
+			padding: 0;
+			justify-content: initial;
+		}
+	}
+
+	&__logo {
+		width: 128px;
+		display: block;
+
+		@include laptop {
+			width: 172px;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		height: calc(100vh - 100%);
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: $color_tertiary;
+		transition: transform .9s ease-in-out;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		padding: 115px 30px;
+
+		@include laptop {
+			width: calc(100% - 172px);
+			position: relative;
+			top: unset;
+			left: unset;
+			padding-left: 33px;
+			height: initial;
+			transition: none;
+			flex-direction: row;
+			padding: 0 0 0 27px;
+		}
+
+
+		&.hide {
+			transform: translateX(100%);
+			@include laptop {
+				transform: translateX(0);
+			}
+		}
+		&.show {
+			transform: translateX(0);
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include laptop {
+			flex-direction: row;
+		}
+
+		&__item {
+
+			padding: 15px 0;
+
+			a {
+				@extend .roboto-medium;
+				color: $text_dark;
+				font-size: 1.125rem;
+			}
+
+			@include laptop {
+				padding: 0;
+				&:not(:first-child) {
+					padding-left: 27px;
+				}
+				
+				&:not(.header__menu__item--contact) {
+					a {
+						position: relative;
+						&:before {
+							content: '';
+							display: block;
+							width: 100%;
+							height: 3px;
+							position: absolute;
+							left: 0;
+							bottom: -5px;
+							border-radius: 2px;
+							background-color: $color_primary;
+							transition: transform .3s ease-in-out;
+							transform: scaleX(0);
+						}
+						&:hover {
+							&:before {
+								transform: scaleX(1);
+							}
+						}
+					}
+				}
+			}
+
+			
+			&--contact {
+				a {
+					background-color: $color_primary;
+					padding: 12px;
+					border-radius: 5px;
+					color: $text_white;
+					transition: background-color .3s ease-in-out;
+					@include laptop {
+						&:hover {
+							background-color: $color_secondary;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__burger {
+		@extend .roboto-medium;
+		display: block;
+		padding: 10px 40px 10px 5px;
+		position: relative;
+		cursor: pointer;
+		color: $text_dark;
+
+		&:before, &:after {			
+			content: '';
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			display: block;
+			border-radius: 30px;
+		}
+
+		&:after {
+			border: 1px solid $color_primary;
+			top: calc(50% - (16px / 2));
+			right: 0;
+			transform: scale(1);
+			opacity: 1;
+			transition: .5s ease-in-out;
+		}
+		&:before {
+			top: calc(50% - (16px / 2) + 1px);
+			right: 1px;
+			transform: scale(0);
+			transform-origin: center;
+			opacity: 0;
+			background-color: $color_primary;
+			transition: .5s ease-in-out;
+		}
+
+		&:hover {
+			&:after {
+				transform: scale(2);
+				opacity: 0;
+			}
+			&:before {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		@include laptop {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,281 @@
+.fpHero {
+	background: rgb(229,239,255);
+	background: linear-gradient(180deg, rgba(229,239,255,1) 0%, rgba(229,239,255,0.26) 85%, rgba(229,239,255,0) 100%);
+	padding: 150px 0;
+
+	@include laptop {
+		padding: 250px 0 320px 0;
+	}
+
+	&__container {
+		padding: 0 30px;
+		width: 100%;
+		max-width: calc(1140px + 60px);
+		margin: auto;
+		@include large-desktop {
+			max-width: calc(1430px + 60px);
+			position: relative;
+		}
+	}
+
+	&__text {
+		max-width: 540px;
+		margin: auto;
+
+		@include desktop {
+			margin: 0;
+		}
+		@include large-desktop {
+			max-width: 740px;
+		}
+	}
+
+	&__title {
+		@extend .abeezee;
+		font-size: 2rem;
+		color: $text_dark;
+		padding: 0 0 20px 0;
+		@include desktop {
+			font-size: 4rem;
+		}
+		@include large-desktop {
+			font-size: 5.3rem;
+		}
+	}
+	&__desc {
+		line-height: 22px;
+		@include large-desktop {
+			font-size: 1.125rem;
+			line-height: 25px;
+		}
+	}
+
+	&__account {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 50px 0 0 0;
+		@include desktop {
+			align-items: center;
+			flex-direction: row;
+		}
+		@include large-desktop {
+			font-size: 1.125rem;
+		}
+	}
+
+	&__btn {
+		display: inline-block;
+		color: $text_white;
+		background-color: $color_primary;
+		border-radius: 100px;
+		padding: 20px 50px;
+		margin: 0 0 15px 0;
+		transition: background-color .3s ease-in-out;
+		@include desktop {
+			margin: 0 20px 0 0;
+			&:hover {
+				background-color: $color_secondary;
+			}
+		}
+		@include large-desktop {
+			padding: 26px 66px;
+		}
+	}
+	&__link {
+		@extend .simple-link;
+		@include desktop {
+			margin: 0 0 0 20px;
+		}
+	}
+
+	&__right {
+		display: none;
+
+		@include large-desktop {
+			display: block;
+			position: absolute;
+			left: 860px;
+			top: 0;
+			width: 1024px;
+			height: 644px;
+		}
+	}
+
+	&__shoes {
+		width: 907px;
+		background-color: $color_white;
+		overflow: hidden;
+		border-radius: 20px;
+		display: flex;
+
+		position: absolute;
+		top: 73px;
+		left: 120px;
+
+		&__image {
+			width: 50%;
+			height: 421px;
+			display: block;
+			padding: 0;
+			margin: 0;
+			img {
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__details {
+			padding: 45px;
+		}
+		&__headline {
+			@extend .abeezee;
+			font-size: 12px;
+			span {
+				color: $text_dark;
+				letter-spacing: 2px;
+				padding-right: 20px;
+			}
+		}
+		&__title {
+			@extend .abeezee;
+			color: $text_dark;
+			font-size: 1.875rem;
+			padding: 24px 0 50px;
+		}
+	}
+
+	&__girls {
+		display: block;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		left: 47px;
+		top: 0;
+		overflow: hidden;
+		border-radius: 20px;
+		box-shadow: 0 4px 4px rgba($color: $color_dark, $alpha: .25);
+	}
+
+	&__sell {
+		@extend .abeezee;
+		display: block;
+		padding: 15px 30px;
+		border-radius: 50px;
+		background-color: $color_fourth;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		position: absolute;
+		left: 385px;
+		top: 50px;
+		
+		font-size: 1.25rem;
+		color: $text_white;
+
+	}
+
+	&__payments {
+		width: 405px;
+		height: 250px;
+		padding: 22px;
+		margin: 0;
+		background-color: $color_white;
+		border-radius: 20px;
+		box-shadow: 0 18px 50px rgba($color: #D7E4F9, $alpha: .5);
+
+		position: absolute;
+		left: 228px;
+		bottom: 0;
+
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+
+		&__item {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			align-items: center;
+			justify-items: center;
+		}
+		&__img {
+			margin: 0;
+			display: block;
+		}
+		&__toggleSwitch {
+			display: block;
+			width: 48px;
+			height: 24px;
+			position: relative;
+
+			input[type="checkbox"] {
+				opacity: 0;
+				width: 0;
+				height: 0;
+			}
+			.toggle {
+				display: block;
+				border-radius: 15px;
+				background-color: #DAE5F6;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				cursor: pointer;
+				transition: .3s ease-in-out;
+
+				&:after {
+					content: '';
+					display: block;
+					width: 18px;
+					height: 18px;
+					border-radius: 15px;
+					background-color: $color_primary;
+
+					position: absolute;
+					top: 3px;
+					left: 3px;
+					transition: .3s ease-in-out;
+				}
+			}
+
+			input:checked + .toggle {
+				background-color: $color_fourth;
+				transition: .3s ease-in-out;
+			}
+			input:checked + .toggle:after {
+				transform: translateX(25px);
+				// background-color: $color_white;
+			}
+		}
+	}
+
+	&__circle {
+		display: block;
+		position: absolute;
+		&#orange {
+			width: 76px;
+			height: 76px;
+			border-radius: 50%;
+			background-color: #FFBA49;
+			left: 87px;
+			bottom: 171px;
+		}
+		&#red {
+			width: 98px;
+			height: 69px;
+			bottom: 98px;
+			left: 659px;
+			background-color: #EF4358;
+			border-radius: 32px;
+			img {
+				width: 32px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}

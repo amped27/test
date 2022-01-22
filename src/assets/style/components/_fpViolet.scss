@@ -1,0 +1,160 @@
+.fpOffre {
+
+	// background: url(../images/background_violet.svg) no-repeat;
+	// background-size: cover;
+	// background-position: center;
+
+	position: relative;
+	background-color: $color_primary;
+	padding: 50px 0;
+	@include desktop {
+		background-color: transparent;
+		padding: 0;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 97%;
+			background: url(../images/background_violet.svg) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+
+	&__container {
+		width: 100%;
+		padding: 0 30px;
+		max-width: 1230px;
+		margin: 0 auto;
+	}
+
+	&__item {
+		position: relative;
+		z-index: 10;
+
+		@include desktop {
+			display: flex;
+		}
+
+		&__text {
+			max-width: 430px;
+
+			@include laptop {
+				max-width: calc(480px + 70px);
+			}
+			
+			p {
+				font-size: 1.125rem;
+				color: $text_white;
+				line-height: 30px;
+			}
+		}
+
+		&__image {
+			display: block;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			max-width: 430px;
+			height: 548px;
+			overflow: hidden;
+			border-radius: 20px;
+			box-shadow: -25px 20px 44px rgba($color: #5430D1, $alpha: .4);
+
+			img {
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__title {
+			@extend .abeezee;
+			font-size: 2.25rem;
+			color: $text_white;
+			padding-bottom: 20px;
+		}
+
+		&__link {
+			@extend .roboto-medium;
+			display: inline-block;
+			font-size: 1.125rem;
+			color: $text_white;
+			padding: 22px 72px;
+			background-color: $color_fourth;
+			border-radius: 100px;
+			margin-top: 40px;
+			transition: .3s ease-in-out;
+			@include laptop {
+				&:hover {
+					opacity: .9;
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+
+			@include desktop {
+				&:before {
+					content: url(../images/misc_image_2.svg);
+					display: block;
+					position: absolute;
+					right: -183px;
+					top: -26px;
+					z-index: -1;
+				}
+				&:after {
+					content: url(../images/circle_image_2.svg);
+					display: block;
+					position: absolute;
+					right: 273px;
+					top: -48px;
+				}
+			}
+
+			.fpOffre__item {
+				&__text {
+					@include laptop {
+						padding: 30px 70px 0 0;
+					}
+				}
+			}
+
+		}
+
+		&:nth-child(odd) {
+
+			@include desktop {
+				&:before {
+					content: url(../images/misc_image_1.svg);
+					display: block;
+					position: absolute;
+					left: -125px;
+					top: 170px;
+					z-index: -1;
+				}
+			}
+
+			.fpOffre__item {
+
+				&__text {
+					@include laptop {
+						padding: 136px 0 0 70px;
+					}
+				}
+
+			}
+		}
+
+		&:not(:last-child) {
+			padding-bottom: 55px;
+		}
+	}
+
+}

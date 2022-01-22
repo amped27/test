@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="manifest" href="images/site.webmanifest">
+	<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Starter simple</title>
+</head>
+<body>
+
+	<header class="header hide">
+		<div class="header__container">
+			<a href="index.html" class="header__logo">
+				<img src="images/logo.svg" alt="Logo d'Hiboost">
+			</a>
+
+			<nav class="header__nav hide">
+				<ul class="header__menu">
+					<li class="header__menu__item">
+						<a href="#">Ultricies justo</a>
+					</li>
+					<li class="header__menu__item">
+						<a href="#">Parturient montes</a>
+					</li>
+					<li class="header__menu__item">
+						<a href="#">Nulla in vulputate</a>
+					</li>
+				</ul>
+
+				<ul class="header__menu">
+					<li class="header__menu__item">
+						<a href="#">Connexion</a>
+					</li>
+					<li class="header__menu__item header__menu__item--contact">
+						<a href="mailto:alexisenguerrand03@gmail.com">Contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<span class="header__burger">Menu</span>
+		</div>
+	</header>
+
+	<section class="fpHero">
+		<div class="fpHero__container">
+			<div class="fpHero__text">
+				<h1 class="fpHero__title">Lorem ipsum<br />dolor sit amet</h1>
+				<p class="fpHero__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at eleifend nulla, ac gravidaneque. Nunc vel sapien pharetra, ultricies justo id, elementum quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla in vulputate neque. Curabitur mattis justo in ipsum dignissim fringilla et sed lorem.</p>
+				<p class="fpHero__account">
+					<a href="#" class="fpHero__btn">Créer un compte</a> or <a href="#" class="fpHero__link">Me connecter</a>
+				</p>
+			</div>
+
+			<div class="fpHero__right">
+				<article class="fpHero__shoes">
+					<figure class="fpHero__shoes__image">
+						<img src="images/shoes.jpg" alt="Chaussures">
+					</figure>
+					<div class="fpHero__shoes__details">
+						<p class="fpHero__shoes__headline"><span>SHOES</span>Adidas Originals</p>
+						<h2 class="fpHero__shoes__title">Adidas Originals<br />OG Sneakers</h2>						
+					</div>
+				</article>
+
+				<figure class="fpHero__girls parallax" data-rellax-speed="-1" data-rellax-percentage="0.5">
+					<img src="images/girls.jpg" alt="Photo">
+				</figure>
+
+				<span class="fpHero__sell">Ventes</span>
+
+				<ul class="fpHero__payments parallax" data-rellax-speed="1" data-rellax-percentage="0.5">
+					<li class="fpHero__payments__item">
+						<figure class="fpHero__payments__img">
+							<img src="images/stripe.png" alt="stripe">
+						</figure>
+						<span class="fpHero__payments__name">Stripe gateway</span>
+						<label class="fpHero__payments__toggleSwitch">
+							<input type="checkbox" checked>
+							<span class="toggle"></span>
+						</label>
+					</li>
+					<li class="fpHero__payments__item">
+						<figure class="fpHero__payments__img">
+							<img src="images/paypal.png" alt="stripe">
+						</figure>
+						<span class="fpHero__payments__name">Paypal gateway</span>
+						<label class="fpHero__payments__toggleSwitch">
+							<input type="checkbox">
+							<span class="toggle"></span>
+						</label>
+					</li>
+					<li class="fpHero__payments__item">
+						<figure class="fpHero__payments__img">
+							<img src="images/bank.svg" alt="bank">
+						</figure>
+						<span class="fpHero__payments__name">Bank gateway</span>
+						<label class="fpHero__payments__toggleSwitch">
+							<input type="checkbox">
+							<span class="toggle"></span>
+						</label>
+					</li>
+				</ul>
+				<span class="fpHero__circle" id="orange"></span>
+				<span class="fpHero__circle" id="red"><img src="images/protected.svg" alt="Protected"></span>
+			</div>
+		</div>
+	</section>
+
+	<section class="fpFunctions">
+		<div class="fpFunctions__container">
+			<h2 class="fpFunctions__title">Maecenas lobortis<br />maximus</h2>
+			<ul class="fpFunctions__list">
+
+				<li class="fpFunctions__item" id="function-1">
+					<a href="#" class="fpFunctions__item__images">
+						<figure class="fpFunctions__item__mainImage">
+							<img src="images/function_01.jpg" alt="Alt">
+						</figure>
+						
+						<figure class="fpFunctions__item__image" id="f1_1">
+							<img src="images/function_04.png" alt="blah">
+						</figure>
+					</a>
+					<h2 class="fpFunctions__item__title">Donec tincidunt tellus</h2>
+					<p class="fpFunctions__item__text">In at eleifend nulla, ac gravida neque. Nunc vel sapien pharetra, ultricies justo id, elementum quam.</p>
+					<a href="#" class="fpFunctions__item__link">Découvrir</a>
+				</li>
+				
+				<li class="fpFunctions__item" id="function-2">
+					<a href="#" class="fpFunctions__item__images" id="tilt">
+						<figure class="fpFunctions__item__mainImage">
+							<img src="images/function_02.jpg" alt="Alt">
+						</figure>
+
+						<figure class="fpFunctions__item__image" id="f2_1">
+							<img src="images/function_09.jpg" alt="blah">
+						</figure>
+						<figure class="fpFunctions__item__image" id="f2_2">
+							<img src="images/function_08.jpg" alt="blah">
+						</figure>
+						<figure class="fpFunctions__item__image" id="f2_3">
+							<img src="images/function_07.jpg" alt="blah">
+						</figure>
+						<figure class="fpFunctions__item__image" id="f2_4">
+							<img src="images/function_05.jpg" alt="blah">
+						</figure>
+						<figure class="fpFunctions__item__image" id="f2_5">
+							<img src="images/function_06.jpg" alt="blah">
+						</figure>
+					</a>
+					<h2 class="fpFunctions__item__title">Quisque scelerisque </h2>
+					<p class="fpFunctions__item__text">In at eleifend nulla, ac gravida neque. Nunc vel sapien pharetra, ultricies justo id, elementum quam.</p>
+					<a href="#" class="fpFunctions__item__link">Découvrir</a>
+				</li>
+				
+				<li class="fpFunctions__item" id="function-3">
+					<a href="#" class="fpFunctions__item__images">
+						<figure class="fpFunctions__item__mainImage">
+							<img src="images/function_03.jpg" alt="Alt">
+						</figure>
+
+						<figure class="fpFunctions__item__image parallax" id="f3_1" data-rellax-speed="2" data-rellax-percentage="0.5">
+							<img src="images/function_10.jpg" alt="blah">
+						</figure>
+						<figure class="fpFunctions__item__image parallax" id="f3_2" data-rellax-speed="1" data-rellax-percentage="0.5">
+							<img src="images/function_11.jpg" alt="blah">
+						</figure>	
+						<figure class="fpFunctions__item__image parallax" id="f3_3" data-rellax-speed="3" data-rellax-percentage="0.5">
+							<img src="images/function_12.jpg" alt="blah">
+						</figure>					
+					</a>
+					<h2 class="fpFunctions__item__title">Auctor ut</h2>
+					<p class="fpFunctions__item__text">In at eleifend nulla, ac gravida neque. Nunc vel sapien pharetra, ultricies justo id, elementum quam.</p>
+					<a href="#" class="fpFunctions__item__link">Découvrir</a>
+				</li>
+
+			</ul>
+		</div>
+	</section>
+
+	<section class="fpOffre">
+		<div class="fpOffre__container">
+			<article class="fpOffre__item">
+				<figure class="fpOffre__item__image">
+					<img src="images/image_1.jpg" alt="Macbook">
+				</figure>
+				<div class="fpOffre__item__text">
+					<h2 class="fpOffre__item__title">Sed vel metus fringilla, consequat.</h2>
+					<p>Pellentesque non semper felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque auctor feugiat. Proin fermentum faucibus ipsum, ut lobortis mi sagittis vel. Nulla auctor metus id lacus mollis bibendum. Vivamus sit amet eleifend dolor.</p>
+					<a href="#" class="fpOffre__item__link">En savoir plus</a>
+				</div>
+			</article>
+			
+			<article class="fpOffre__item">
+				<figure class="fpOffre__item__image">
+					<img src="images/image_02.jpg" alt="Macbook">
+				</figure>
+				<div class="fpOffre__item__text">
+					<h2 class="fpOffre__item__title">Nullam vitae leo egestas lectus tincidunt.</h2>
+					<p>Duis rutrum tellus a convallis aliquet. Morbi rutrum blandit sapien, vel mollis neque consequat non. Pellentesque consectetur, dolor non tincidunt tincidunt, orci lorem accumsan nisi, ornare iaculis est purus sed enim. Nullam ullamcorper porttitor diam.</p>
+					<a href="#" class="fpOffre__item__link">En savoir plus</a>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section class="fpTestimony">
+		<div class="fpTestimony__container">
+			<h2 class="fpTestimony__title">Sed vel metus fringilla,	consequat ligula eu.</h2>
+
+			<ul class="fpTestimony__slider">
+				<li class="fpTestimony__slider__item fpTestimony__slider__item--first">
+					<p>Quisque scelerisque tincidunt arcu et efficitur. Duis a turpis quis mi suscipit iaculis.</p>
+					<p>Quis non nisl. In ligula velit, fermentum vitae lobortis a, eleifend in diam.</p>
+				</li>
+				<li class="fpTestimony__slider__item fpTestimony__slider__item--second">
+					<p>Quis non nisl. In ligula velit, fermentum vitae lobortis a, eleifend in diam.</p>
+				</li>
+				<li class="fpTestimony__slider__item fpTestimony__slider__item--third">
+					<p>Quisque scelerisque tincidunt arcu et efficitur. Duis a turpis quis mi suscipit iaculis.</p>
+				</li>
+				<li class="fpTestimony__slider__item">
+					<p>Quisque scelerisque tincidunt arcu et efficitur. Duis a turpis quis mi suscipit iaculis.</p>
+					<p>Quis non nisl. In ligula velit, fermentum vitae lobortis a, eleifend in diam.</p>
+				</li>
+			</ul>
+
+			<div class="fpTestimony__nav">
+				<div class="fpTestimony__nav__btn" id="btn-left"><img src="images/arrow.svg" alt="Précèdent"></div>
+				<div class="fpTestimony__nav__btn" id="btn-right"><img src="images/arrow.svg" alt="Suivant"></div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="prefooter">
+			<div class="prefooter__container">
+				<p>A convallis aliquet. <strong>Morbi rutrum blandit sapien</strong>, vel mollis neque consequat non.</p>
+				<a href="#" class="prefooter__btn">Découvrir</a>
+			</div>
+		</div>
+		<ul class="footer__container">
+			<li class="footer__item">Nullam vitae</li>
+			<li class="footer__item"><strong>Morbi</strong> rutrum blandit sapien</li>
+			<li class="footer__item">Vel mollis neque consequa</li>
+		</ul>
+	</footer>
+
+	<script src="js/lib.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

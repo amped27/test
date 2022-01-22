@@ -1,0 +1,159 @@
+.fpFunctions {
+
+	padding: 0 0 123px 0;
+	
+	&__container {
+		padding: 0 30px;
+		max-width: 1430px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		@extend .abeezee;
+		font-size: 1.8rem;
+		color: $text_dark;
+		text-align: center;
+		padding-bottom: 80px;
+
+		@include desktop {
+			font-size: 3.4rem;
+		}
+	}
+
+	&__list {
+
+		@include desktop {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 73px 73px auto;
+			gap: 0 70px;
+		}
+
+	}
+
+	&__item {
+		
+		&__images {
+			position: relative;
+			display: block;
+			@include desktop {
+				&:hover {
+					.fpFunctions__item {
+						&__mainImage {
+							img {
+								transform: scale(1.1);
+							}
+						}
+					}
+				}
+			}
+		}
+		#tilt {
+			transform-style: preserve-3d;
+			transform: perspective(1000px);
+		}
+		&__mainImage {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: 0 18px 52px rgba($color: #D7E4F9, $alpha: .5);
+			img {
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+				height: 100%;
+				transition: transform .5s ease;
+			}
+		}
+		&__image {
+			margin: 0;
+			display: block;
+			position: absolute;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		#f1_1 {
+			display: none;
+			@include desktop {
+				display: block;
+				top: 3px;
+				left: -106px;
+			}
+		}
+		#f2_1 {
+			top: -42px;
+			left: 48px;
+			transform: translateZ(20px);
+		}
+		#f2_2 {
+			top: 19px;
+			right: 36px;
+			transform: translateZ(20px);
+		}
+		#f2_3 {
+			top: 112px;
+			left: 48px;
+			transform: translateZ(20px);
+		}
+		#f2_4 {
+			top: 134px;
+			right: 96px;
+			transform: translateZ(20px);
+		}
+		#f2_5 {
+			top: 249px;
+			left: 153px;
+			transform: translateZ(20px);
+		}	
+		#f3_1 {
+			display: none;
+			@include desktop {
+				display: block;
+				bottom: calc(100% + 56px);
+				right: 48px;
+			}
+		}	
+		#f3_2 {
+			top: -51px;
+			left: 32px;
+		}
+		#f3_3 {
+			top: 115px;
+			right: -65px;
+		}			
+
+		&__title {
+			@extend .abeezee;
+			color: $text_dark;
+			font-size: 2.25rem;
+			padding: 55px 0 5px;
+			line-height: 70px;
+		}
+		&__text {
+			font-size: 1.125rem;
+			line-height: 30px;
+			padding-bottom: 15px;
+		}
+		&__link {
+			@extend .simple-link;
+		}
+
+	}
+
+	#function-1 {
+		grid-column: 1/2;
+		grid-row: 1/4;
+	}
+	#function-2 {
+		grid-column: 2/3;
+		grid-row: 2/4;
+	}
+	#function-3 {
+		grid-column: 3/4;
+		grid-row: 3/4;
+	}
+
+}

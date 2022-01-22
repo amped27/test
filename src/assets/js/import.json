@@ -1,0 +1,12 @@
+{
+    "lib" : [
+        "./node_modules/gsap/dist/gsap.min.js",
+        "./node_modules/vanilla-tilt/dist/vanilla-tilt.babel.min.js",
+        "./node_modules/rellax/rellax.min.js"
+    ],
+    "main" : [
+		"./src/assets/js/menu.js",
+		"./src/assets/js/slider.js",
+		"./src/assets/js/parallax.js"
+    ]
+}
